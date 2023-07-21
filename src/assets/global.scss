@@ -1,0 +1,54 @@
+@use 'vars' as *;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 700;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+// Background colors in dark mode
+// Does not affect light mode
+html.dark, .dark body {
+  background: $color-dark;
+}
+
+// Background colors in light mode
+// Does not affect dark mode
+html, body {
+  background: $color-light-background;
+}
+
+el-message-box.dark {
+  border-radius: 12px;
+}
+
+.card {
+  border: 0;
+  border-radius: 12px;
+  box-shadow: black 0 0 !important;
+}

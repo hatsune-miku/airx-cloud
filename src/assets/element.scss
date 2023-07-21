@@ -1,0 +1,12 @@
+@use 'vars' as vars;
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': vars.$color-primary,
+    ),
+    'danger': (
+      'base': rgb(220, 108, 108)
+    )
+  ),
+);
